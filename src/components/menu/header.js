@@ -79,7 +79,7 @@ export default function() {
               <BreakpointProvider>
                 <Breakpoint l down>
                   {showmenu && 
-                  <div className='menu'>
+                  <div className='menu text-center'>
                     <div className='navbar-item'>
                       <NavLink to="/" onClick={() => btn_icon(!showmenu)}>
                         Home
@@ -88,6 +88,16 @@ export default function() {
                     <div className='navbar-item'>
                       <NavLink to="/portfolio" onClick={() => btn_icon(!showmenu)}>
                         Portofolio
+                      </NavLink>
+                    </div>
+                    <div className='navbar-item'>
+                      <NavLink to="/team" onClick={() => btn_icon(!showmenu)}>
+                        Team
+                      </NavLink>
+                    </div>
+                    <div className='navbar-item'>
+                      <NavLink to="/faq" onClick={() => btn_icon(!showmenu)}>
+                        Faq's
                       </NavLink>
                     </div>
                     <div className='navbar-item'>
@@ -106,6 +116,12 @@ export default function() {
                     </div>
                     <div className='navbar-item'>
                       <NavLink to="/portfolio">Portfolio</NavLink>
+                    </div>
+                    <div className='navbar-item'>
+                      <NavLink to="/team">Team</NavLink>
+                    </div>
+                    <div className='navbar-item'>
+                      <NavLink to="/faq">Faq's</NavLink>
                     </div>
                     <div className='navbar-item'>
                       <NavLink to="/contact">Contact</NavLink>

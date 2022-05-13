@@ -85,21 +85,18 @@ export default class Responsive extends Component {
               <div className='title'>CEO/Founder</div>
             </div>
             <div className='icon'>
-               <span onClick={()=> window.open("//facebook.com/", "_blank")}>
-                <i className="fa fa-facebook" aria-hidden="true"></i>
-              </span>
-              <span onClick={()=> window.open("//linkedin.com/", "_blank")}>
+              <span onClick={()=> window.open("https://www.linkedin.com/in/joshuajwallacee/", "_blank")}>
                 <i className="fa fa-linkedin" aria-hidden="true"></i>
               </span>
-              <span onClick={()=> window.open("//twitter.com/", "_blank")}>
-                <i className="fa fa-twitter" aria-hidden="true"></i>
+              <span onClick={()=> window.open("https://azoria.au/", "_blank")}>
+                <i className="fa fa-internet-explorer" aria-hidden="true"></i>
               </span>
             </div>
           </CustomSlide>
           <CustomSlide className='itm' index={2}>
             <div className='bg'>
               <img
-                src="./img/team/team3.jpg"
+                src="./img/team/jrad.jpg"
                 className="img-fluid"
                 alt="Imageteam"
               />
@@ -109,14 +106,11 @@ export default class Responsive extends Component {
               <div className='title'>Media Production Partner, Founder of JKL Media</div>
             </div>
             <div className='icon'>
-               <span onClick={()=> window.open("//facebook.com/", "_blank")}>
-                <i className="fa fa-facebook" aria-hidden="true"></i>
-              </span>
-              <span onClick={()=> window.open("//linkedin.com/", "_blank")}>
+              <span onClick={()=> window.open("https://www.linkedin.com/in/jarryd-lang-2b4618205/", "_blank")}>
                 <i className="fa fa-linkedin" aria-hidden="true"></i>
               </span>
-              <span onClick={()=> window.open("//twitter.com/", "_blank")}>
-                <i className="fa fa-twitter" aria-hidden="true"></i>
+              <span onClick={()=> window.open("https://jklmedia.com.au/", "_blank")}>
+                <i className="fa fa-internet-explorer" aria-hidden="true"></i>
               </span>
             </div>
           </CustomSlide>
@@ -124,7 +118,7 @@ export default class Responsive extends Component {
           <CustomSlide className='itm' index={3}>
             <div className='bg'>
               <img
-                src="./img/team/team3.jpg"
+                src="./img/team/stell.png"
                 className="img-fluid"
                 alt="Imageteam"
               />
@@ -134,14 +128,11 @@ export default class Responsive extends Component {
               <div className='title'>Graaphics Design Partner, Founder of Stellio Graphics Design</div>
             </div>
             <div className='icon'>
-               <span onClick={()=> window.open("//facebook.com/", "_blank")}>
-                <i className="fa fa-facebook" aria-hidden="true"></i>
-              </span>
-              <span onClick={()=> window.open("//linkedin.com/", "_blank")}>
+              <span onClick={()=> window.open("https://www.linkedin.com/company/work-with-stellio/", "_blank")}>
                 <i className="fa fa-linkedin" aria-hidden="true"></i>
               </span>
-              <span onClick={()=> window.open("//twitter.com/", "_blank")}>
-                <i className="fa fa-twitter" aria-hidden="true"></i>
+              <span onClick={()=> window.open("https://stellio.com.au/", "_blank")}>
+                <i className="fa fa-internet-explorer" aria-hidden="true"></i>
               </span>
             </div>
           </CustomSlide>

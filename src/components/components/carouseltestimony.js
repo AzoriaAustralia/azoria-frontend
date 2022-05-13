@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Slider from "react-slick";
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
+import testimonials from '../data/testimonials';
 
 class CustomSlide extends Component {
   render() {
@@ -71,76 +72,34 @@ export default class Responsive extends Component {
       ]
     };
     return (
-    <section className='container-fluid  wraper-testimony' 
-    style={{backgroundImage: `url(${'./img/testimony.jpg'})`}}>
-      <div className='row m-10-hor'>
-        <div className='testimony'>
-          <Slider {...settings}>
+      <section className='container-fluid  wraper-testimony'
+        style={{ backgroundImage: `url(${'./img/testimony.jpg'})` }}>
+        <div className='row m-10-hor'>
+          <div className='testimony'>
+            <Slider {...settings}>
+              {testimonials.map((e) => {
+                return (
+                  <CustomSlide className='itm' index={1}>
+                    <div className='blockquote'>
+                      <div className="fa"></div>
+                      <div className="conesti">
+                        <p>
+                          {e.text}
+                        </p>
+                        <div className="bytesti">
+                          {e.name}
+                        </div>
+                      </div>
+                    </div>
+                  </CustomSlide>
+                )
+              })}
 
-            <CustomSlide className='itm' index={1}>
-              <div className='blockquote'>
-                <div className="fa"></div>
-                <div className="conesti">
-                  <p>
-                  I am glad I found Azoria. They are very responsive to my needs and haven’t let me down yet. My business is growing fast and I can spend less time worrying about it and more time relaxing.
-                  </p>
-                  <div className="bytesti">
-                  Lucas Meyer
-                  </div>
-                </div>
-              </div>
-            </CustomSlide>
 
-            <CustomSlide className='itm' index={2}>
-              <div className='blockquote'>
-                <div className="fa"></div>
-                <div className="conesti">
-                  <p>
-                  Awesome customer service, server runs great, was truly worth the investment! Thanks Azoria, Highly recommended.
-                  </p>
-                  <div className="bytesti">
-                  Matthew Wolfaardt
-                  </div>
-                </div>
-              </div>
-            </CustomSlide>
-
-            {/* <CustomSlide className='itm' index={3}>
-              <div className='blockquote'>
-                <div className="fa"></div>
-                <div className="conesti">
-                  <p>
-                  Curabitur mollis bibendum luctus. 
-                  Duis suscipit vitae dui sed suscipit. 
-                  Vestibulum vitae metus sollicitudin. 
-                  </p>
-                  <div className="bytesti">
-                    Lauria, Guest
-                  </div>
-                </div>
-              </div>
-            </CustomSlide>
-
-            <CustomSlide className='itm' index={4}>
-              <div className='blockquote'>
-                <div className="fa"></div>
-                <div className="conesti">
-                  <p>
-                  Curabitur mollis bibendum luctus. 
-                  Duis suscipit vitae dui sed suscipit. 
-                  Vestibulum vitae metus sollicitudin. 
-                  </p>
-                  <div className="bytesti">
-                    Lauria, Guest
-                  </div>
-                </div>
-              </div>
-            </CustomSlide> */}
-
-          </Slider>
+            </Slider>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
     );
   }
 }

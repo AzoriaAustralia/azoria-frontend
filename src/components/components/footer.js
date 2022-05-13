@@ -13,30 +13,17 @@ export default () => (
           </div>
         </div>
       </div>
-      <div className='col-md-2'>
-        <div className='footer-col'>
-          <div className='heading'>
-            Link's
-          </div>
-          <div className='content'>
-            <div className='link'>Frequently Asked</div>
-            <div className='link'>Terms & Conditions</div>
-            {/* <div className='link'>Help Center</div> */}
-            <div className='link'>Contact Us</div>
-          </div>
-        </div>
-      </div>
+
       <div className='col-md-2'>
         <div className='footer-col'>
           <div className='heading'>
             Sitemap
           </div>
           <div className='content'>
-            <div className='link'>Home</div>
-            <div className='link'>About Us</div>
-            <div className='link'>Team</div>
-            <div className='link'>Portfolio</div>
-            <div className='link'>Contact</div>
+            <div className='link'><a style={{color: 'white'}} href="/">Home</a></div>
+            <div className='link'><a style={{color: 'white'}} href="/faq">FAQ</a></div>
+            <div className='link'><a style={{color: 'white'}} href="/portfolio">Portfolio</a></div>
+            <div className='link'><a style={{color: 'white'}} href="/contact">Contact</a></div>
           </div>
         </div>
       </div>
@@ -64,6 +51,9 @@ export default () => (
       <div className='row m-10-hor'>
         <div className='col-md-6'>
           <div className='content'>© Copyright 2022 <span className='font-weight-bold'>Azoria</span> All rights reserved.</div>
+        </div>
+        <div className='col-md-6'>
+          <div className='content text-right'>All media contained in this website is licenced</div>
         </div>
       </div>
     </div>

@@ -2,7 +2,7 @@ import React from 'react';
 import posed from 'react-pose';
 import { Link } from '@reach/router';
 import Carouselteam from '../components/carouselteam';
-import Bannercontact from '../components/bannercontact';
+import Bannercontact from '../components/bannerportfolio';
 import Testimony from '../components/carouseltestimony';
 import Footer from '../components/footer';
 
@@ -14,12 +14,11 @@ const ListContainer = posed.div({
 const Item = posed.section({
   enter: { y: 0, opacity: 1 },
   exit: { y: 5, opacity: 0 }
-});
-
+});   
 
 export default () => (
   <ListContainer>
-    <Item className='jumbotron breadcumb' style={{ backgroundImage: `url(${'./img/imghome1.jpg'})` }}>
+    <Item className='jumbotron breadcumb' style={{ backgroundImage: `url(${'./img/home.jpg'})`, backgroundPosition: 'center'}}>
       <div className='homebread'>
         <div className='container-fluid'>
           <div className='row m-10-hor'>
@@ -117,7 +116,7 @@ export default () => (
       <div className='row m-10-hor'>
 
         <div className="col-md-6 pr-md-0">
-          <img src="./img/blog.jpg" className="imgslickz" alt="#" />
+          <img src="./img/dev.png" className="imgslickz" alt="#" />
         </div>
 
         <div className="col-md-6 centered p-md-5 pt-5">
@@ -126,9 +125,9 @@ export default () => (
               Media Creation
             </div>
             <p className="mt-3">
-            Advertising & Media creation are available through Azoria, Utilising the amazing talent available right here in our backyard, You can be sure your business will stick out from the crowd.
+            Media creation are available through Azoria, Utilising the amazing talent available right here in our backyard, You can be sure your business will stick out from the crowd.
             </p>
-            <Link className='btn' to="">
+            <Link className='btn' to="/team">
               <span>More Detail</span>
             </Link>
           </div>
@@ -149,7 +148,7 @@ export default () => (
         </div>
 
         <div className="col-md-6 pl-md-0">
-          <img src="./img/blog1.png" className="imgslickz" alt="#" />
+          <img src="./img/dev.png" className="imgslickz" alt="#" />
         </div>
 
       </div>
@@ -162,7 +161,7 @@ export default () => (
           <div className='heading'>About Our Team</div>
           <div className='row'>
             <div className='col-md-8 mx-auto'>
-              <p className='content'>
+              <p id='team' className='content'>
                 A family owned business consisting only of people who care about your success.
               </p>
             </div>

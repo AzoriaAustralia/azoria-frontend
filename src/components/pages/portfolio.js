@@ -2,9 +2,9 @@ import React from 'react';
 import { Link } from '@reach/router';
 import posed from 'react-pose';
 import ImageGallery from "../components/ImageGallery";
-import Bannercontact from '../components/bannercontact';
 import Testimony from '../components/carouseltestimony';
 import Footer from '../components/footer';
+import BannerFaq from '../components/bannerfaq'
 
 const ListContainer = posed.div({
   enter: { staggerChildren: 20 },
@@ -19,7 +19,7 @@ const Item = posed.section({
 
 export default () => (
 <ListContainer>
-  <Item className='jumbotron breadcumb' style={{backgroundImage: `url(${'./img/porto.jpg'})`}}>
+  <Item className='jumbotron breadcumb' style={{backgroundImage: `url(${'./img/portfolio.jpg'})`, backgroundPosition: 'center'}}>
     <div className='mainbreadcumb'>
       <div className='container-fluid'>
         <div className='row m-10-hor'>
@@ -49,7 +49,7 @@ export default () => (
     </div>
   </Item>
 
-  <Bannercontact/>
+  <BannerFaq/>
   <Testimony />
   <Footer />
 </ListContainer>

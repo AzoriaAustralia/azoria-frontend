@@ -117,7 +117,7 @@ export default () => {
 
   return (
     <ListContainer>
-      <Item className='jumbotron breadcumb' style={{backgroundImage: `url(${'./img/contact.jpg'})`}}>
+      <Item className='jumbotron breadcumb' style={{backgroundImage: `url(${'./img/contact.jpg'})`, backgroundPosition: 'bottom'}}>
         <div className='mainbreadcumb'>
           <div className='container-fluid'>
             <div className='row m-10-hor'>
