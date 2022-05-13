@@ -12,6 +12,7 @@ const CoolLightbox = ({
   isOpen,
   onClose
 }) => {
+  
   const gotoPrevious = () =>
     currentImageIndex > 0 && setCurrentIndex(currentImageIndex - 1);
 
@@ -21,7 +22,7 @@ const CoolLightbox = ({
 
   return (
     <StyledLightbox
-      style={{ opacity: "1" }}
+      style={{ opacity: "1"}}
       isOpen={isOpen}
       onPrev={gotoPrevious}
       onNext={gotoNext}
@@ -69,10 +70,11 @@ CoolLightbox.propTypes = {
 export default CoolLightbox;
 
 const StyledLightbox = styled(Lightbox)`
-  opacity: 1;
+  width: 100vw;
+  overflow: hidden;
   background: ${({ theme }) =>
     Color(theme.accentColor)
-      .alpha(0.95)
+      .alpha(0.75)
       .hsl()
       .string()};
   * ::selection {

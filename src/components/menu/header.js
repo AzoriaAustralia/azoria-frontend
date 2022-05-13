@@ -28,10 +28,10 @@ const NavLink = props => (
 export default function() {
 
     const [openMenu, setOpenMenu] = React.useState(false);
-    const handleBtnClick = (): void => {
+    const handleBtnClick = () => {
       setOpenMenu(!openMenu);
     };
-    const closeMenu = (): void => {
+    const closeMenu = () => {
       setOpenMenu(false);
     };
     const ref = useOnclickOutside(() => {
@@ -83,11 +83,6 @@ export default function() {
                     <div className='navbar-item'>
                       <NavLink to="/" onClick={() => btn_icon(!showmenu)}>
                         Home
-                      </NavLink>
-                    </div>
-                    <div className='navbar-item'>
-                      <NavLink to="/price" onClick={() => btn_icon(!showmenu)}>
-                        Pricing
                       </NavLink>
                     </div>
                     <div className='navbar-item'>

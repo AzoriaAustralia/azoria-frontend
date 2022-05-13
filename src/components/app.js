@@ -4,8 +4,6 @@ import { Router, Location, Redirect } from '@reach/router';
 import ScrollToTopBtn from './menu/ScrollToTop';
 import Header from './menu/header';
 import Home from './pages/home';
-import About from './pages/about';
-import Team from './pages/team';
 import Portfolio from './pages/portfolio';
 import Contact from './pages/contact';
 
@@ -37,15 +35,13 @@ export default () => (
   <div className="wraper">
     <Header/>
       <PosedRouter>
-      {/* <ScrollTop path="/"> */}
+      <ScrollTop path="/">
         <Home exact path="/">
           <Redirect to="/" />
         </Home>
-        <About path="/about" />
-        <Team path="/team" />
         <Portfolio path="/portfolio" />
         <Contact path="/contact" />
-        {/* </ScrollTop> */}
+        </ScrollTop>
       </PosedRouter>
     <ScrollToTopBtn />
   </div>

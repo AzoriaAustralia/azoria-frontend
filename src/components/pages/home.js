@@ -31,7 +31,7 @@ export default () => (
                 Australian Owned & Operated
               </div>
               <div className='content'>
-                The team at Azoria enjoy watching your project succeed, From initial designs, Development, Media creation, Hosting and IT Support.
+                The team at Azoria enjoy watching your project succeed, Initial designs, Development, Media creation, Hosting and IT Support.
               </div>
               <Link className="btn" to="/portfolio">
                   <span>Read More</span>
@@ -140,7 +140,7 @@ export default () => (
               Development
             </div>
             <p className="mt-3">
-              Azoria's Development services provide a quick turnaround of your desired project/web app. Not sure where to start? Check our FAQ's!
+              Azoria's Development services provide a quick turnaround of your desired project/web app. Not sure where to start? Check our FAQ's! (Pssst, That's our actual website >>)
             </p>
             <Link className='btn' to="">
               <span>Faq's</span>
@@ -149,7 +149,7 @@ export default () => (
         </div>
 
         <div className="col-md-6 pl-md-0">
-          <img src="./img/blog1.jpg" className="imgslickz" alt="#" />
+          <img src="./img/blog1.png" className="imgslickz" alt="#" />
         </div>
 
       </div>
@@ -176,5 +176,5 @@ export default () => (
     <Testimony />
     <Footer />
 
-  </ListContainer>
+  </ListContainer >
 );

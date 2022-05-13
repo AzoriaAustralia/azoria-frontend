@@ -61,6 +61,7 @@
     "react-dev-utils": "^10.2.1",
     "react-dom": "^16.13.1",
     "react-hook-form": "^6.4.0",
+    "react-images-viewer": "^1.7.1",
     "react-photo-gallery": "^8.0.0",
     "react-pose": "^4.0.10",
     "react-slick": "^0.27.8",

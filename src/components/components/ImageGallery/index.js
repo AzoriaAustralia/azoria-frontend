@@ -5,8 +5,7 @@ import images from "./images";
 
 const ImageGallery = () => {
   const [isOpen, setOpen] = useState(false);
-  const [currentImageIndex, setCurrentIndex] = useState();
-
+  let [currentImageIndex, setCurrentIndex] = useState();
   return (
     <>
       {/* react-photo-gallery */}
@@ -25,6 +24,7 @@ const ImageGallery = () => {
         onClose={() => setOpen(false)}
         images={images}
       />
+      
     </>
   );
 };

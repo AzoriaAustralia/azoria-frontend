@@ -27,8 +27,8 @@ export default class Responsive extends Component {
         {
           breakpoint: 1900,
           settings: {
-            slidesToShow: 4,
-            slidesToScroll: 4,
+            slidesToShow: 3,
+            slidesToScroll: 3,
             infinite: true,
             dots: false
           }
@@ -75,7 +75,7 @@ export default class Responsive extends Component {
           <CustomSlide className='itm' index={1}>
             <div className='bg'>
               <img
-                src="./img/team/team1.jpg"
+                src="./img/team/josh.jpg"
                 className="img-fluid"
                 alt="Imageteam"
               />
@@ -96,34 +96,10 @@ export default class Responsive extends Component {
               </span>
             </div>
           </CustomSlide>
-          <CustomSlide className='itm' index={4}>
-            <div className='bg'>
-              <img
-                src="./img/team/team4.jpg"
-                className="img-fluid"
-                alt="Imageteam"
-              />
-            </div>
-            <div className='desc'>
-              <div className='name'>Mikayla Wallace</div>
-              <div className='title'>CFO, Co-Founder</div>
-            </div>
-            <div className='icon'>
-               <span onClick={()=> window.open("//facebook.com/", "_blank")}>
-                <i className="fa fa-facebook" aria-hidden="true"></i>
-              </span>
-              <span onClick={()=> window.open("//linkedin.com/", "_blank")}>
-                <i className="fa fa-linkedin" aria-hidden="true"></i>
-              </span>
-              <span onClick={()=> window.open("//twitter.com/", "_blank")}>
-                <i className="fa fa-twitter" aria-hidden="true"></i>
-              </span>
-            </div>
-          </CustomSlide>
           <CustomSlide className='itm' index={2}>
             <div className='bg'>
               <img
-                src="./img/team/team2.jpg"
+                src="./img/team/team3.jpg"
                 className="img-fluid"
                 alt="Imageteam"
               />
