@@ -78,6 +78,7 @@ export default class Responsive extends Component {
                 src="./img/team/josh.jpg"
                 className="img-fluid"
                 alt="Imageteam"
+                loading="lazy" 
               />
             </div>
             <div className='desc'>
@@ -99,6 +100,7 @@ export default class Responsive extends Component {
                 src="./img/team/jrad.jpg"
                 className="img-fluid"
                 alt="Imageteam"
+                loading="lazy" 
               />
             </div>
             <div className='desc'>
@@ -121,6 +123,7 @@ export default class Responsive extends Component {
                 src="./img/team/stell.png"
                 className="img-fluid"
                 alt="Imageteam"
+                loading="lazy" 
               />
             </div>
             <div className='desc'>

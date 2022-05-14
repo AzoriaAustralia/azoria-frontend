@@ -5,7 +5,7 @@ import Carouselteam from '../components/carouselteam';
 import Bannercontact from '../components/bannerportfolio';
 import Testimony from '../components/carouseltestimony';
 import Footer from '../components/footer';
-import SimpleImageSlider from 'react-simple-image-slider'
+import SimpleImageSlider from 'react-simple-image-slider';
 
 const ListContainer = posed.div({
   enter: { staggerChildren: 20 },
@@ -137,7 +137,7 @@ export default () => (
           {/* <img src="./img/dev.png" className="imgslickz" alt="#" /> */}
         </div>
 
-        <div className="col-md-6 centered p-md-5 pt-5">
+        <div className="col-md-5 centered p-md-5 pt-5">
           <div>
             <div className="heading">
               Media Creation
@@ -166,7 +166,7 @@ export default () => (
         </div>
 
         <div className="col-md-6 pl-md-0">
-          <img src="./img/dev.png" className="imgslickz" alt="#" style={{width: 500, height: 400 }}/>
+          <img src="./img/dev.png" loading="lazy" className="imgslickz" alt="#" style={{width: 500, height: 400 }}/>
         </div>
 
       </div>

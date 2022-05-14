@@ -7,7 +7,7 @@ export default () => (
 
           <div className='col-md-6'>
           
-            <img src='./img/portfoliobanner.jpg' alt='imgbanner' className='w-100 border-radius'/>
+            <img src='./img/portfoliobanner.jpg' loading="lazy" alt='imgbanner' className='w-100 border-radius'/>
           </div>
           <div className='col-md-6 centered'>
             <div>

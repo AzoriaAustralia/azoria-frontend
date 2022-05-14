@@ -4,7 +4,7 @@ import posed from 'react-pose';
 import Bannerportfolio from '../components/bannerportfolio';
 import Testimony from '../components/carouseltestimony';
 import Footer from '../components/footer';
-import questions from '../components/faq';
+import questions from '../data/faq';
 
 const ListContainer = posed.div({
   enter: { staggerChildren: 20 },

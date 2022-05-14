@@ -6,7 +6,7 @@ export default () => (
         <div className='row m-10-hor'>
 
           <div className='col-md-6'>
-            <img src='./img/faqbanner.jpg' alt='imgbanner' className='w-100 border-radius'/>
+            <img src='./img/faqbanner.jpg' loading="lazy" alt='imgbanner' className='w-100 border-radius'/>
           </div>
           <div className='col-md-6 centered'>
             <div>

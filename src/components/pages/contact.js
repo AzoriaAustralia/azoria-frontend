@@ -1,9 +1,11 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { useForm } from 'react-hook-form';
 import { Link } from '@reach/router';
 import posed from 'react-pose';
 import Testimony from '../components/carouseltestimony';
 import Footer from '../components/footer';
+import emailjs from '@emailjs/browser';
+require('dotenv').config()
 
 const ListContainer = posed.div({
   enter: { staggerChildren: 20 },
@@ -15,123 +17,105 @@ const Item = posed.section({
   exit: { y: 5, opacity: 0 }
 });
 
+const required = "This field is required";
+
 export default () => {
 
-  // const [submitted, setSubmitted] = useState(false);
+  const [submitted, setSubmitted] = useState(false);
   
-  // const {
-  //   register,
-  //   handleSubmit,
-  //   setError,
-  //   errors,
-  //   reset,
-  //   formState: { isSubmitting }
-  // } = useForm();
+  const {
+    register,
+    handleSubmit,
+    setError,
+    errors,
+    reset,
+    formState: { isSubmitting }
+  } = useForm();
 
+  const form = useRef();
+  const onSubmit = async form => {
+      emailjs.send(process.env.REACT_APP_SERVICE_ID, process.env.REACT_APP_TEMPLATE_ID, form, process.env.REACT_APP_PUBLIC_KEY).then(response => {
+        if (response.text == 'OK') {setSubmitted(true);reset();}
+        else{setError("submit","Oops! There seems to be an issue!")}
+      })
+    };
 
-  // // 3858ee921a148f0bba869613c4d8b76f:34ddf57b379599fee17244475088f4ed
+  const showSubmitError = msg => <p className="msg-error">{msg}</p>;
 
+  const showThankYou = (
+    <div className="msg-confirm mt-5">
+      <h3>Awesome! Your message was sent.</h3>
+    </div>
+  );
 
-  // const onSubmit = async data => {
-  //   try {
-  //     const request = mailjet
-  //     .post("send", {'version': 'v3.1'})
-  //     .request({
-  //       "Messages":[
-  //         {
-  //           "From": {
-  //             "Email": "joshua@azoria.au",
-  //             "Name": "Joshua"
-  //           },
-  //           "To": [
-  //             {
-  //               "Email": "joshua@azoria.au",
-  //               "Name": "Joshua"
-  //             }
-  //           ],
-  //           "Subject": "Greetings from Mailjet.",
-  //           "TextPart": JSON.stringify(data),
-  //           "CustomID": "AppGettingStartedTest"
-  //         }
-  //       ]
-  //     })
-  //     request
-  //       .then((result) => {
-  //         console.log(result.body)
-  //       })
-  //     setSubmitted(true);
-  //     reset();
-  //   } catch (error) {
-  //     setError(
-  //       "submit",
-  //       "submitError",
-  //       `Oops! There seems to be an issue! ${error.message}`
-        
-  //     );
-  //     console.log(error.statusCode);
-  //   }
-  // };
+  const showForm = (
+    <form ref={form} className='formcontact' onSubmit={handleSubmit(onSubmit)} method="post">
+      <label htmlFor="name">
+        <h5>Name</h5>
+        <input
+          type="text"
+          name="name"
+          id="name"
+          placeholder="Your name"
+          ref={register({ required })}
+          disabled={isSubmitting}
+        />
+        {errors.name && <div className="msg-error">{errors.name.message}</div>}
+      </label>
 
-  // const showSubmitError = msg => <p className="msg-error">{msg}</p>;
+      <label htmlFor="phone">
+        <h5>Phone</h5>
+        <input
+          type="phone"
+          name="phone"
+          id="phone"
+          placeholder="0412 345 678"
+          pattern="[0-9]{10}"
+          ref={register({ required })}
+          disabled={isSubmitting}
+        />
+        {errors.phone && (
+          <div className="msg-error">{errors.phone.message}</div>
+        )}
+      </label>
 
-  // const showThankYou = (
-  //   <div className="msg-confirm mt-5">
-  //     <h3>Awesome! Your message was sent.</h3>
-  //   </div>
-  // );
+      <label htmlFor="email">
+        <h5>Email</h5>
+        <input
+          type="email"
+          name="email"
+          id="email"
+          placeholder="your@email.address"
+          ref={register({ required })}
+          disabled={isSubmitting}
+        />
+        {errors.email && (
+          <div className="msg-error">{errors.email.message}</div>
+        )}
+      </label>
 
-  // const showForm = (
-  //   <form className='formcontact' onSubmit={handleSubmit(onSubmit)} method="post">
-  //     <label htmlFor="name">
-  //       <h5>Name</h5>
-  //       <input
-  //         type="text"
-  //         name="name"
-  //         id="name"
-  //         placeholder="Your name"
-  //         ref={register({ required })}
-  //         disabled={isSubmitting}
-  //       />
-  //       {errors.name && <div className="msg-error">{errors.name.message}</div>}
-  //     </label>
+      <label htmlFor="question">
+        <h5>Message</h5>
+        <textarea
+          ref={register({ required })}
+          name="message"
+          id="message"
+          rows="3"
+          placeholder="Your message"
+          disabled={isSubmitting}
+        />
+        {errors.question && (
+          <div className="msg-error">{errors.question.message}</div>
+        )}
+      </label>
 
-  //     <label htmlFor="email">
-  //       <h5>Email</h5>
-  //       <input
-  //         type="email"
-  //         name="email"
-  //         id="email"
-  //         placeholder="your@email.address"
-  //         ref={register({ required })}
-  //         disabled={isSubmitting}
-  //       />
-  //       {errors.email && (
-  //         <div className="msg-error">{errors.email.message}</div>
-  //       )}
-  //     </label>
-
-  //     <label htmlFor="question">
-  //       <h5>Message</h5>
-  //       <textarea
-  //         ref={register({ required })}
-  //         name="question"
-  //         id="question"
-  //         rows="3"
-  //         placeholder="Your message"
-  //         disabled={isSubmitting}
-  //       />
-  //       {errors.question && (
-  //         <div className="msg-error">{errors.question.message}</div>
-  //       )}
-  //     </label>
-
-  //     <div className="submit-wrapper">
-  //       <button type="submit" disabled={isSubmitting}>
-  //         <span>Submit</span>
-  //       </button>
-  //     </div>
-  //   </form>
-  // );
+      <div className="submit-wrapper">
+        <button type="submit" disabled={isSubmitting}>
+          <span>Submit</span>
+        </button>
+      </div>
+    </form>
+  );
 
   return (
     <ListContainer>
@@ -160,9 +144,8 @@ export default () => {
             <div className="form-side">
               <h2>Get in Touch</h2>
               <p>Leave us a message! We are a professional firm, Please no Marketing or SEO proposal's. They will be marked as junk.</p>
-              <h2>Form Currently Disabled</h2>
-              {/* {submitted ? showThankYou : showForm}
-              {errors && errors.submit && showSubmitError(errors.submit.message)} */}
+              {submitted ? showThankYou : showForm}
+              {errors && errors.submit && showSubmitError(errors.submit.message)}
             </div>
           </div>
 
