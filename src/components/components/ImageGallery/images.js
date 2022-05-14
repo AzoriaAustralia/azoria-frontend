@@ -1,19 +1,19 @@
 export default [
   {
     src: "/img/gallery/intervention.png",
-    alt: "Start Gallery",
+    alt: "Intervention Finance (ReactJs - Spartan Swap)",
     caption: "Intervention Finance",
-    width: 500,
+    width: 735,
     height: 400,
     key: '1',
   },
   {
     src:
-      "/img/gallery/2.jpg",
-    alt: "Variations of passages",
-    caption: "Main Gallery",
-    width: 532,
-    height: 709,
+      "/img/gallery/nlls.png",
+    alt: "Newman Low Loaders (WordPress)",
+    caption: "Newman Low Loaders",
+    width: 530,
+    height: 600,
     key: '2',
   },
   // {

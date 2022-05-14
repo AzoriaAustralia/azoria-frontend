@@ -62,7 +62,7 @@ export default () => (
 
         <div className='col-md-7'>
           <div className='content'>
-            Along with the abovementioned service's, Azoria provides IT support, setup and administration statewide in Western Australia.
+            Along with the above-mentioned service's, Azoria provides IT support, setup and administration statewide in Western Australia.
           </div>
           <div className='content'>
             Contact us today with any services required to get your project & infrastructure up and running. From initial consultations to ongoing support.
