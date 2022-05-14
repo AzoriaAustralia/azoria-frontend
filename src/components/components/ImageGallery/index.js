@@ -5,7 +5,8 @@ import images from "./images";
 
 const ImageGallery = () => {
   const [isOpen, setOpen] = useState(false);
-  let [currentImageIndex, setCurrentIndex] = useState();
+  let [currentImageIndex, setCurrentIndex] = useState(0);
+
   return (
     <>
       {/* react-photo-gallery */}
@@ -13,6 +14,7 @@ const ImageGallery = () => {
         images={images}
         handleClick={(e, { index }) => {
           setCurrentIndex(index);
+          console.log('OPEN');
           setOpen(true);
         }}
       />
@@ -21,10 +23,12 @@ const ImageGallery = () => {
         currentImageIndex={currentImageIndex}
         setCurrentIndex={setCurrentIndex}
         isOpen={isOpen}
-        onClose={() => setOpen(false)}
+        onClose={() => {
+          setOpen(false);
+          window.location.reload();
+        }}
         images={images}
       />
-      
     </>
   );
 };

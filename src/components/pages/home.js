@@ -5,6 +5,7 @@ import Carouselteam from '../components/carouselteam';
 import Bannercontact from '../components/bannerportfolio';
 import Testimony from '../components/carouseltestimony';
 import Footer from '../components/footer';
+import SimpleImageSlider from 'react-simple-image-slider'
 
 const ListContainer = posed.div({
   enter: { staggerChildren: 20 },
@@ -14,11 +15,17 @@ const ListContainer = posed.div({
 const Item = posed.section({
   enter: { y: 0, opacity: 1 },
   exit: { y: 5, opacity: 0 }
-});   
+});
+
+const images = [
+  { url: "./img/designs/eyecare.jpg" },
+  { url: "./img/designs/flour.jpg" },
+  { url: "./img/designs/zc.jpg" }
+];
 
 export default () => (
   <ListContainer>
-    <Item className='jumbotron breadcumb' style={{ backgroundImage: `url(${'./img/home.jpg'})`, backgroundPosition: 'center'}}>
+    <Item className='jumbotron breadcumb' style={{ backgroundImage: `url(${'./img/home.jpg'})`, backgroundPosition: 'center' }}>
       <div className='homebread'>
         <div className='container-fluid'>
           <div className='row m-10-hor'>
@@ -33,7 +40,7 @@ export default () => (
                 The team at Azoria enjoy watching your project succeed, Initial designs, Development, Media creation, Hosting and IT Support.
               </div>
               <Link className="btn" to="/portfolio">
-                  <span>Read More</span>
+                <span>Read More</span>
               </Link>
             </div>
           </div>
@@ -49,13 +56,13 @@ export default () => (
             In Perth, Western Australia
           </div>
           <div className='heading'>
-            Statewide Service <span className='br'></span>and Support 
+            Statewide Service <span className='br'></span>and Support
           </div>
         </div>
 
         <div className='col-md-7'>
           <div className='content'>
-            Along with the abovementioned service's, Azoria provides IT support, setup and administration statewide in Western Australia. 
+            Along with the abovementioned service's, Azoria provides IT support, setup and administration statewide in Western Australia.
           </div>
           <div className='content'>
             Contact us today with any services required to get your project & infrastructure up and running. From initial consultations to ongoing support.
@@ -90,7 +97,7 @@ export default () => (
               Software & Program Development
             </div>
             <div className='content'>
-            In the ever changing world of technology, Faster and more efficient ways to store and process data have become available. Looking to upgrade? Get a cutting edge on your competitors.
+              In the ever changing world of technology, Faster and more efficient ways to store and process data have become available. Looking to upgrade? Get a cutting edge on your competitors.
             </div>
           </div>
         </div>
@@ -104,7 +111,7 @@ export default () => (
               App Development
             </div>
             <div className='content'>
-            Web app's are becoming more and more popular by the day. Most of the websites you visit are specifically optimised for a streamlined user experience. 
+              Web app's are becoming more and more popular by the day. Most of the websites you visit are specifically optimised for a streamlined user experience.
             </div>
           </div>
         </div>
@@ -116,7 +123,18 @@ export default () => (
       <div className='row m-10-hor'>
 
         <div className="col-md-6 pr-md-0">
-          <img src="./img/dev.png" className="imgslickz" alt="#" />
+
+          <SimpleImageSlider
+            width={500}
+            height={400}
+            images={images}
+            showBullets={false}
+            showNavs={false}
+            slideDuration={1}
+            autoPlay={true}
+          />
+
+          {/* <img src="./img/dev.png" className="imgslickz" alt="#" /> */}
         </div>
 
         <div className="col-md-6 centered p-md-5 pt-5">
@@ -125,10 +143,10 @@ export default () => (
               Media Creation
             </div>
             <p className="mt-3">
-            Media creation are available through Azoria, Utilising the amazing talent available right here in our backyard, You can be sure your business will stick out from the crowd.
+              Media creation are available through Azoria, Utilising the amazing talent available right here in our backyard, You can be sure your business will stick out from the crowd.
             </p>
-            <Link className='btn' to="/team">
-              <span>More Detail</span>
+            <Link className='btn' to="/contact">
+              <span>Contact Us</span>
             </Link>
           </div>
         </div>
@@ -139,16 +157,16 @@ export default () => (
               Development
             </div>
             <p className="mt-3">
-              Azoria's Development services provide a quick turnaround of your desired project/web app. Not sure where to start? Check our FAQ's! (Pssst, That's our actual website >>)
+              Azoria's Development services provide a quick turnaround of your desired project/web app. Not sure where to start? Check our FAQ's! (Pssst, That's our actual website built with React &gt;&gt;)
             </p>
-            <Link className='btn' to="">
+            <Link className='btn' to="/faq">
               <span>Faq's</span>
             </Link>
           </div>
         </div>
 
         <div className="col-md-6 pl-md-0">
-          <img src="./img/dev.png" className="imgslickz" alt="#" />
+          <img src="./img/dev.png" className="imgslickz" alt="#" style={{width: 500, height: 400 }}/>
         </div>
 
       </div>

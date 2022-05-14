@@ -6,6 +6,7 @@ export default () => (
         <div className='row m-10-hor'>
 
           <div className='col-md-6'>
+          
             <img src='./img/portfoliobanner.jpg' alt='imgbanner' className='w-100 border-radius'/>
           </div>
           <div className='col-md-6 centered'>
@@ -14,7 +15,7 @@ export default () => (
                 You can trust us
               </div>
               <div className="heading">
-                "The proof is in the pudding"
+                Just check our work.
               </div>
               <p>
                 See some of our works in the Portfolio.<br/>Cryptocurrency dApps, Solidity Contracts,<br/> Retailer Websites and Server Setups.

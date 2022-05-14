@@ -7,7 +7,7 @@ import Home from './pages/home';
 import Portfolio from './pages/portfolio';
 import Contact from './pages/contact';
 import FAQ from './pages/faq';
-import Team from './pages/team'
+
 const RouteContainer = posed.div({
   enter: { opacity: 1, delay: 300, beforeChildren: 300 },
   exit: { opacity: 0, delay: 300, beforeChildren: 300 }
@@ -43,7 +43,6 @@ export default () => (
         <FAQ path="/faq" />
         <Portfolio path="/portfolio" />
         <Contact path="/contact" />
-        <Team path="/team" />
         </ScrollTop>
       </PosedRouter>
     <ScrollToTopBtn />

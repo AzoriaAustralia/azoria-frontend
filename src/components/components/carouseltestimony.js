@@ -79,7 +79,7 @@ export default class Responsive extends Component {
             <Slider {...settings}>
               {testimonials.map((e) => {
                 return (
-                  <CustomSlide className='itm' index={1}>
+                  <CustomSlide className='itm' key={e.key}>
                     <div className='blockquote'>
                       <div className="fa"></div>
                       <div className="conesti">

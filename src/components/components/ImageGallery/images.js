@@ -4,7 +4,8 @@ export default [
     alt: "Start Gallery",
     caption: "Intervention Finance",
     width: 500,
-    height: 400
+    height: 400,
+    key: '1',
   },
   {
     src:
@@ -12,7 +13,8 @@ export default [
     alt: "Variations of passages",
     caption: "Main Gallery",
     width: 532,
-    height: 709
+    height: 709,
+    key: '2',
   },
   // {
   //   src:

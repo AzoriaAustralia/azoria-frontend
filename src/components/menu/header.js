@@ -91,11 +91,6 @@ export default function() {
                       </NavLink>
                     </div>
                     <div className='navbar-item'>
-                      <NavLink to="/team" onClick={() => btn_icon(!showmenu)}>
-                        Team
-                      </NavLink>
-                    </div>
-                    <div className='navbar-item'>
                       <NavLink to="/faq" onClick={() => btn_icon(!showmenu)}>
                         Faq's
                       </NavLink>
@@ -116,9 +111,6 @@ export default function() {
                     </div>
                     <div className='navbar-item'>
                       <NavLink to="/portfolio">Portfolio</NavLink>
-                    </div>
-                    <div className='navbar-item'>
-                      <NavLink to="/team">Team</NavLink>
                     </div>
                     <div className='navbar-item'>
                       <NavLink to="/faq">Faq's</NavLink>

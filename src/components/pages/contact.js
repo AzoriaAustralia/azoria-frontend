@@ -15,105 +15,123 @@ const Item = posed.section({
   exit: { y: 5, opacity: 0 }
 });
 
-
-const URL = "https://jsonplaceholder.typicode.com/posts";
-const required = "This field is required";
-
 export default () => {
 
-  const [submitted, setSubmitted] = useState(false);
+  // const [submitted, setSubmitted] = useState(false);
   
-  const {
-    register,
-    handleSubmit,
-    setError,
-    errors,
-    reset,
-    formState: { isSubmitting }
-  } = useForm();
+  // const {
+  //   register,
+  //   handleSubmit,
+  //   setError,
+  //   errors,
+  //   reset,
+  //   formState: { isSubmitting }
+  // } = useForm();
 
-  const onSubmit = async data => {
-    try {
-      await fetch(URL, {
-        method: "POST",
-        mode: "cors",
-        cache: "no-cache",
-        body: JSON.stringify(data),
-        headers: {
-          "Content-type": "application/json; charset=UTF-8"
-        }
-      });
-      setSubmitted(true);
-      reset();
-    } catch (error) {
-      setError(
-        "submit",
-        "submitError",
-        `Oops! There seems to be an issue! ${error.message}`
-      );
-    }
-  };
 
-  const showSubmitError = msg => <p className="msg-error">{msg}</p>;
+  // // 3858ee921a148f0bba869613c4d8b76f:34ddf57b379599fee17244475088f4ed
 
-  const showThankYou = (
-    <div className="msg-confirm mt-5">
-      <h3>Awesome! Your message was sent.</h3>
-    </div>
-  );
 
-  const showForm = (
-    <form className='formcontact' onSubmit={handleSubmit(onSubmit)} method="post">
-      <label htmlFor="name">
-        <h5>Name</h5>
-        <input
-          type="text"
-          name="name"
-          id="name"
-          placeholder="Your name"
-          ref={register({ required })}
-          disabled={isSubmitting}
-        />
-        {errors.name && <div className="msg-error">{errors.name.message}</div>}
-      </label>
+  // const onSubmit = async data => {
+  //   try {
+  //     const request = mailjet
+  //     .post("send", {'version': 'v3.1'})
+  //     .request({
+  //       "Messages":[
+  //         {
+  //           "From": {
+  //             "Email": "joshua@azoria.au",
+  //             "Name": "Joshua"
+  //           },
+  //           "To": [
+  //             {
+  //               "Email": "joshua@azoria.au",
+  //               "Name": "Joshua"
+  //             }
+  //           ],
+  //           "Subject": "Greetings from Mailjet.",
+  //           "TextPart": JSON.stringify(data),
+  //           "CustomID": "AppGettingStartedTest"
+  //         }
+  //       ]
+  //     })
+  //     request
+  //       .then((result) => {
+  //         console.log(result.body)
+  //       })
+  //     setSubmitted(true);
+  //     reset();
+  //   } catch (error) {
+  //     setError(
+  //       "submit",
+  //       "submitError",
+  //       `Oops! There seems to be an issue! ${error.message}`
+        
+  //     );
+  //     console.log(error.statusCode);
+  //   }
+  // };
 
-      <label htmlFor="email">
-        <h5>Email</h5>
-        <input
-          type="email"
-          name="email"
-          id="email"
-          placeholder="your@email.address"
-          ref={register({ required })}
-          disabled={isSubmitting}
-        />
-        {errors.email && (
-          <div className="msg-error">{errors.email.message}</div>
-        )}
-      </label>
+  // const showSubmitError = msg => <p className="msg-error">{msg}</p>;
 
-      <label htmlFor="question">
-        <h5>Message</h5>
-        <textarea
-          ref={register({ required })}
-          name="question"
-          id="question"
-          rows="3"
-          placeholder="Your message"
-          disabled={isSubmitting}
-        />
-        {errors.question && (
-          <div className="msg-error">{errors.question.message}</div>
-        )}
-      </label>
+  // const showThankYou = (
+  //   <div className="msg-confirm mt-5">
+  //     <h3>Awesome! Your message was sent.</h3>
+  //   </div>
+  // );
 
-      <div className="submit-wrapper">
-        <button type="submit" disabled={isSubmitting}>
-          <span>Submit</span>
-        </button>
-      </div>
-    </form>
-  );
+  // const showForm = (
+  //   <form className='formcontact' onSubmit={handleSubmit(onSubmit)} method="post">
+  //     <label htmlFor="name">
+  //       <h5>Name</h5>
+  //       <input
+  //         type="text"
+  //         name="name"
+  //         id="name"
+  //         placeholder="Your name"
+  //         ref={register({ required })}
+  //         disabled={isSubmitting}
+  //       />
+  //       {errors.name && <div className="msg-error">{errors.name.message}</div>}
+  //     </label>
+
+  //     <label htmlFor="email">
+  //       <h5>Email</h5>
+  //       <input
+  //         type="email"
+  //         name="email"
+  //         id="email"
+  //         placeholder="your@email.address"
+  //         ref={register({ required })}
+  //         disabled={isSubmitting}
+  //       />
+  //       {errors.email && (
+  //         <div className="msg-error">{errors.email.message}</div>
+  //       )}
+  //     </label>
+
+  //     <label htmlFor="question">
+  //       <h5>Message</h5>
+  //       <textarea
+  //         ref={register({ required })}
+  //         name="question"
+  //         id="question"
+  //         rows="3"
+  //         placeholder="Your message"
+  //         disabled={isSubmitting}
+  //       />
+  //       {errors.question && (
+  //         <div className="msg-error">{errors.question.message}</div>
+  //       )}
+  //     </label>
+
+  //     <div className="submit-wrapper">
+  //       <button type="submit" disabled={isSubmitting}>
+  //         <span>Submit</span>
+  //       </button>
+  //     </div>
+  //   </form>
+  // );
 
   return (
     <ListContainer>
@@ -142,8 +160,9 @@ export default () => {
             <div className="form-side">
               <h2>Get in Touch</h2>
               <p>Leave us a message! We are a professional firm, Please no Marketing or SEO proposal's. They will be marked as junk.</p>
-              {submitted ? showThankYou : showForm}
-              {errors && errors.submit && showSubmitError(errors.submit.message)}
+              <h2>Form Currently Disabled</h2>
+              {/* {submitted ? showThankYou : showForm}
+              {errors && errors.submit && showSubmitError(errors.submit.message)} */}
             </div>
           </div>
 
@@ -158,7 +177,7 @@ export default () => {
                 </div>
                 <div className='list'>
                   <i className="fa fa-envelope-o"></i>
-                  <a href='mailto:Contact_info@slickz.com' target='_blank' rel='noopener noreferrer'>
+                  <a href='mailto:contac@azoria.au' target='_blank' rel='noopener noreferrer'>
                     contact@azoria.au
                   </a>
                 </div>
