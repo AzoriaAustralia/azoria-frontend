@@ -1,12 +1,12 @@
 export default [
-  {
-    src: "/img/gallery/intervention.png",
-    alt: "Intervention Finance (ReactJs - Spartan Swap)",
-    caption: "Intervention Finance",
-    width: 735,
-    height: 400,
-    key: '1',
-  },
+  // {
+  //   src: "/img/gallery/intervention.png",
+  //   alt: "Intervention Finance (ReactJs - Spartan Swap)",
+  //   caption: "Intervention Finance",
+  //   width: 735,
+  //   height: 400,
+  //   key: '1',
+  // },
   {
     src:
       "/img/gallery/nlls.png",
@@ -15,6 +15,15 @@ export default [
     width: 530,
     height: 600,
     key: '2',
+  },
+  {
+    src:
+      "/img/gallery/metisninjas.png",
+    alt: "Metis Ninja's Minting dApp",
+    caption: "Metis Ninja's",
+    width: 700,
+    height: 690,
+    key: '3',
   },
   // {
   //   src:

@@ -125,7 +125,7 @@ export default () => (
         <div className="col-md-6 pr-md-0">
 
           <SimpleImageSlider
-            width={500}
+            width={480}
             height={400}
             images={images}
             showBullets={false}
@@ -166,7 +166,7 @@ export default () => (
         </div>
 
         <div className="col-md-6 pl-md-0">
-          <img src="./img/dev.png" loading="lazy" className="imgslickz" alt="#" style={{width: 500, height: 400 }}/>
+          <img src="./img/dev.png" loading="lazy" className="imgslickz" alt="#" style={{width: 480, height: 400 }}/>
         </div>
 
       </div>
